@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Andrey H. Onoue | Software Engineer · Platform · QA · AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-    content="Andrey H. Onoue — Software Engineer com foco em QA, Kubernetes, Docker, Platform Engineering, Observabilidade e IA/LLM em bancos e fintechs." />
-
-  <!-- Fontes e ícones -->
+    content="Andrey H. Onoue — Software Engineer focused on QA, Kubernetes, Docker, Platform Engineering, Observability and AI/LLM in banks and fintechs." />
+  <!-- Fonts & icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -16,7 +14,6 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkM4W8X0C23i1oC9cGXD2ZtClZBlJz0z7V+JQ4JdBw0zJ6qRay4J5H1g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-
   <style>
     :root {
       --bg: #020617;
@@ -30,14 +27,10 @@
       --accent: #38bdf8;
       --accent-soft: rgba(56, 189, 248, 0.1);
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: "Inter", system-ui, sans-serif;
       background:
         radial-gradient(circle at 0% 0%, #1d1b84 0, transparent 40%),
         radial-gradient(circle at 100% 0%, #0f766e 0, transparent 40%),
@@ -45,454 +38,135 @@
         var(--bg);
       color: var(--text);
     }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 24px 16px;
-      gap: 24px;
-    }
-
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { min-height: 100vh; display: flex; max-width: 1200px; margin: 0 auto; padding: 24px 16px; gap: 24px; }
     /* SIDEBAR */
     .sidebar {
-      width: 320px;
-      min-width: 260px;
-      max-width: 320px;
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
-      border-radius: 18px;
-      padding: 20px 18px 24px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      box-shadow:
-        0 18px 45px rgba(15, 23, 42, 0.8),
-        0 0 0 1px rgba(15, 23, 42, 0.6);
-      position: sticky;
-      top: 24px;
-      align-self: flex-start;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
+      width: 320px; min-width: 260px; max-width: 320px;
+      background: linear-gradient(180deg, rgba(15,23,42,0.95), rgba(15,23,42,0.98));
+      border-radius: 18px; padding: 20px 18px 24px;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: 0 18px 45px rgba(15,23,42,0.8), 0 0 0 1px rgba(15,23,42,0.6);
+      position: sticky; top: 24px; align-self: flex-start;
+      display: flex; flex-direction: column; gap: 18px;
     }
-
-    .avatar-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 12px;
-    }
-
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid var(--accent);
-      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
-    }
-
-    .name {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    .role {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .tagline {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .sidebar-section-title {
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.72rem;
-      color: var(--muted);
-      margin-bottom: 3px;
-    }
-
-    .contact-list,
-    .link-list,
-    .mini-pill-group {
-      list-style: none;
-      margin: 0;
-      padding: unset;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      font-size: 0.85rem;
-    }
-
-    .contact-list li,
-    .link-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      color: var(--muted);
-    }
-
-    .contact-list i,
-    .link-list i {
-      width: 16px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--accent);
-      margin-top: 1px;
-    }
-
-    .contact-list a {
-      word-break: break-all;
-    }
-
-    .mini-pill-group {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .mini-pill {
-      font-size: 0.7rem;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .nav-links a {
-      font-size: 0.75rem;
-      padding: 5px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: rgba(15, 23, 42, 0.95);
-    }
-
+    .avatar { width: 120px; height: 120px; border-radius: 999px; object-fit: cover; border: 2px solid var(--accent); box-shadow: 0 0 0 4px rgba(56,189,248,0.25); }
+    .name { font-size: 1.2rem; font-weight: 700; }
+    .role { font-size: 0.9rem; color: var(--muted); }
+    .tagline { font-size: 0.85rem; color: var(--muted); }
+    .sidebar-section-title { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; color: var(--muted); margin-bottom: 3px; }
+    .contact-list, .link-list, .mini-pill-group { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; font-size: 0.85rem; }
+    .contact-list li, .link-list li { display: flex; align-items: flex-start; gap: 6px; color: var(--muted); }
+    .contact-list i, .link-list i { width: 16px; text-align: center; font-size: 0.9rem; color: var(--accent); margin-top: 1px; }
+    .mini-pill-group { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+    .mini-pill { font-size: 0.7rem; padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.6); background: rgba(15,23,42,0.9); color: var(--muted); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .nav-links a { font-size: 0.75rem; padding: 5px 9px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.4); background: rgba(15,23,42,0.95); }
     /* MAIN */
     .main {
       flex: 1;
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 18px;
-      padding: 20px 20px 28px;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      box-shadow:
-        0 16px 35px rgba(15, 23, 42, 0.7),
-        0 0 0 1px rgba(15, 23, 42, 0.6);
+      background: rgba(15,23,42,0.9);
+      border-radius: 18px; padding: 20px 20px 28px;
+      border: 1px solid rgba(148,163,184,0.25);
+      box-shadow: 0 16px 35px rgba(15,23,42,0.7), 0 0 0 1px rgba(15,23,42,0.6);
       backdrop-filter: blur(18px);
     }
-
-    .main-header {
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(30, 64, 175, 0.6);
-      margin-bottom: 18px;
-    }
-
-    .main-header h1 {
-      font-size: 1.4rem;
-      margin: 0 0 4px;
-    }
-
-    .main-header p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .badge {
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(56, 189, 248, 0.6);
-      background: rgba(15, 23, 42, 0.95);
-      color: var(--accent);
-    }
-
-    .section {
-      margin-bottom: 22px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(30, 64, 175, 0.45);
-    }
-
-    .section:last-of-type {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .section-title h2 {
-      margin: 0;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-    }
-
-    .section-title i {
-      font-size: 0.9rem;
-      color: var(--accent);
-    }
-
-    .section-body {
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-
-    .pill-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 4px 0 10px;
-    }
-
-    .pill {
-      font-size: 0.78rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.95);
-      color: var(--muted);
-    }
-
-    .experience-item {
-      margin-bottom: 14px;
-    }
-
-    .experience-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .experience-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: baseline;
-      flex-wrap: wrap;
-    }
-
-    .experience-role {
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .experience-company {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .experience-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .experience-item ul {
-      margin: 6px 0 0 18px;
-      padding: 0;
-    }
-
-    .experience-item li {
-      margin-bottom: 3px;
-    }
-
-    .list-compact {
-      padding-left: 18px;
-      margin: 4px 0 0;
-    }
-
-    .list-compact li {
-      margin-bottom: 3px;
-    }
-
-    @media (max-width: 900px) {
-      .page {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        position: static;
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .page {
-        padding: 12px 10px 24px;
-      }
-
-      .main {
-        padding: 16px 14px 22px;
-      }
-    }
+    .main-header { padding-bottom: 12px; border-bottom: 1px solid rgba(30,64,175,0.6); margin-bottom: 18px; }
+    .main-header h1 { font-size: 1.4rem; margin: 0 0 4px; }
+    .main-header p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .badge { font-size: 0.75rem; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(56,189,248,0.6); background: rgba(15,23,42,0.95); color: var(--accent); }
+    .section { margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid rgba(30,64,175,0.45); }
+    .section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .section-title { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .section-title h2 { margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); }
+    .section-title i { font-size: 0.9rem; color: var(--accent); }
+    .pill-group { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 10px; }
+    .pill { font-size: 0.78rem; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.6); background: rgba(15,23,42,0.95); color: var(--muted); }
+    .experience-item { margin-bottom: 14px; }
+    .experience-header { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+    .experience-role { font-weight: 600; font-size: 0.95rem; }
+    .experience-company { font-size: 0.9rem; color: var(--muted); }
+    .experience-meta { font-size: 0.8rem; color: var(--muted); }
+    .list-compact { padding-left: 18px; margin: 4px 0 0; }
+    .list-compact li { margin-bottom: 3px; }
+    @media (max-width: 900px) { .page { flex-direction: column; } .sidebar { position: static; width: 100%; max-width: 100%; } }
   </style>
 </head>
-
 <body>
   <div class="page">
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="avatar-wrapper">
-        <!-- Coloque sua imagem andrey.png na mesma pasta deste arquivo -->
-        <img src="andrey.png" alt="Foto de Andrey H. Onoue" class="avatar" />
+        <img src="andrey.png" alt="Photo of Andrey H. Onoue" class="avatar" />
         <div class="name">Andrey H. Onoue</div>
         <div class="role">Software Engineer · QA · Platform Engineer · SRE · AI</div>
         <p class="tagline">
-          Profundo conhecimento em engenharia de software, QA, Kubernetes/Docker,
-          engenharia de plataforma, observabilidade e IA/LLM no contexto de bancos e fintechs.
+          Deep expertise in software engineering, QA, Kubernetes/Docker, platform engineering, observability and AI/LLM in banking and fintech environments.
         </p>
       </div>
-
       <div>
-        <div class="sidebar-section-title">Contato</div>
+        <div class="sidebar-section-title">Contact</div>
         <ul class="contact-list">
-          <li>
-            <i class="fa-solid fa-location-dot"></i>
-            <span>São Bernardo do Campo – SP, Brasil</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-envelope"></i>
-            <span>
-              <a href="mailto:andreyhitoshi1997@gmail.com">Email</a>
-            </span>
-          </li>
-          <li>
-            <i class="fa-brands fa-linkedin"></i>
-            <span>
-              <a href="https://www.linkedin.com/in/andrey-onoue-411453123" target="_blank" rel="noreferrer">
-                Linkedin
-              </a>
-            </span>
-          </li>
-          <li>
-            <i class="fa-brands fa-github"></i>
-            <span>
-              <a href="https://github.com/andreyhitoshi1997" target="_blank" rel="noreferrer">
-                Github
-              </a>
-            </span>
-          </li>
+          <li><i class="fa-solid fa-location-dot"></i><span>São Bernardo do Campo – SP, Brazil</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span><a href="mailto:andreyhitoshi1997@gmail.com">Email</a></span></li>
+          <li><i class="fa-brands fa-linkedin"></i><span><a href="https://www.linkedin.com/in/andrey-onoue-411453123" target="_blank" rel="noreferrer">LinkedIn</a></span></li>
+          <li><i class="fa-brands fa-github"></i><span><a href="https://github.com/andreyhitoshi1997" target="_blank" rel="noreferrer">GitHub</a></span></li>
         </ul>
       </div>
-
       <div>
-        <div class="sidebar-section-title">Navegação</div>
+        <div class="sidebar-section-title">Navigation</div>
         <div class="nav-links">
-          <a href="#about">Sobre</a>
+          <a href="#about">About</a>
           <a href="#skills">Skills</a>
-          <a href="#experience">Experiência</a>
-          <a href="#projects">Projetos</a>
-          <a href="#education">Formação</a>
-          <a href="#certifications">Certificações</a>
-          <a href="#languages">Idiomas</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#languages">Languages</a>
         </div>
       </div>
-
       <div>
-        <div class="sidebar-section-title">Foco Atual</div>
+        <div class="sidebar-section-title">Current Focus</div>
         <div class="mini-pill-group">
           <span class="mini-pill">Software Engineering</span>
           <span class="mini-pill">Platform Engineering</span>
           <span class="mini-pill">DevEx & QA</span>
           <span class="mini-pill">Kubernetes & Docker</span>
-          <span class="mini-pill">Observabilidade</span>
+          <span class="mini-pill">Observability</span>
           <span class="mini-pill">RAG & LLM</span>
         </div>
       </div>
     </aside>
-
     <!-- MAIN -->
     <main class="main">
-      <!-- HEADER -->
       <header class="main-header" id="about">
-        <h1>Software Engineer para Bancos, Fintechs e Plataformas</h1>
+        <h1>Software Engineer for Banks, Fintechs & Financial Platforms</h1>
         <p>
-          Engenharia de Software, QA, Kubernetes, Docker, Observabilidade e IA aplicadas
-          a projetos de grande escala com foco em Fintechs, Bancos e Empresas focadas na área financeira.
+          Software Engineering, QA, Kubernetes, Docker, Observability and AI applied to large-scale projects focused on fintechs, banks and financial companies.
         </p>
         <div class="badge-row">
           <span class="badge">Cloud-Native</span>
           <span class="badge">QA & Test Automation</span>
           <span class="badge">Kubernetes & Docker</span>
           <span class="badge">Platform & DevEx</span>
-          <span class="badge">Observabilidade</span>
+          <span class="badge">Observability</span>
           <span class="badge">RAG · LLM · ML</span>
         </div>
       </header>
-
-      <!-- SUMMARY -->
       <section class="section">
-        <div class="section-title">
-          <i class="fa-solid fa-user-astronaut"></i>
-          <h2>Resumo</h2>
-        </div>
+        <div class="section-title"><i class="fa-solid fa-user-astronaut"></i><h2>Summary</h2></div>
         <div class="section-body">
-          <p>
-            Software Engineer com expertise em <strong>TypeScript, React, Node/NestJS
-              e Java/Spring</strong>, construindo soluções <strong>fullstack e cloud-native</strong>
-            para bancos e fintechs. Forte background em <strong>desenvolvimento,
-              DevOps e engenharia de qualidade</strong>, permitindo entregar soluções
-            fim a fim com foco em confiabilidade, segurança e métricas de negócio.
-          </p>
-          <p>
-            Experiente em <strong>arquiteturas DDD/Event-Driven</strong>, ambientes
-            <strong>AWS & Azure</strong>, automação de <strong>CI/CD</strong> e
-            <strong>observabilidade</strong> (OpenTelemetry, Prometheus, Grafana,
-            Datadog, Dynatrace). Atuação marcante em <strong>Platform Engineering
-              e Developer Experience</strong>, liderando RFC/ADR, definição de
-            <strong>SLI/SLO</strong> e criação de plataformas internas que reduzem
-            custos operacionais e aumentam a eficiência das squads.
-          </p>
-          <p>
-            Em IA, foco em <strong>pipelines RAG, LLMs e modelos deep learning</strong>
-            (Transformers, LSTMs, CNNs) aplicados a <strong>qualidade de software,
-              testes automatizados e analytics</strong>, reduzindo falsos positivos,
-            melhorando cobertura de testes e trazendo inteligência para decisões
-            técnicas em ambientes regulados.
-          </p>
+          <p>Software Engineer with expertise in <strong>TypeScript, React, Node/NestJS and Java/Spring</strong>, building <strong>fullstack and cloud-native</strong> solutions for banks and fintechs. Strong background in <strong>development, DevOps and quality engineering</strong>, delivering end-to-end solutions focused on reliability, security and business metrics.</p>
+          <p>Experienced in <strong>DDD/Event-Driven architectures</strong>, <strong>AWS & Azure</strong> environments, <strong>CI/CD automation</strong> and <strong>observability</strong> (OpenTelemetry, Prometheus, Grafana, Datadog, Dynatrace). Key contributor in <strong>Platform Engineering and Developer Experience</strong>, leading RFC/ADR processes, SLI/SLO definition and internal platforms that reduce operational costs and increase squad efficiency.</p>
+          <p>In AI, focus on <strong>RAG pipelines, LLMs and deep learning models</strong> (Transformers, LSTMs, CNNs) applied to software quality, automated testing and analytics, reducing false positives, improving test coverage and bringing intelligence to technical decisions in regulated environments.</p>
         </div>
       </section>
-
-      <!-- CORE SKILLS -->
       <section class="section" id="skills">
-        <div class="section-title">
-          <i class="fa-solid fa-microchip"></i>
-          <h2>Core Skills</h2>
-        </div>
+        <div class="section-title"><i class="fa-solid fa-microchip"></i><h2>Core Skills</h2></div>
         <div class="section-body">
-
-          <h3>Linguagens & Frameworks</h3>
+          <h3>Languages & Frameworks</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-java-plain"></i> Java</span>
             <span class="pill"><i class="devicon-kotlin-plain"></i> Kotlin</span>
@@ -502,20 +176,17 @@
             <span class="pill"><i class="devicon-spring-plain" style="color:#9ca3af;"></i> Spring</span>
             <span class="pill"><i class="devicon-nodejs-plain"></i> Node.js</span>
           </div>
-
           <h3>Front-End</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-react-original"></i> React.js</span>
           </div>
-
           <h3>Mobile</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-android-plain"></i> Android</span>
             <span class="pill"><i class="devicon-flutter-plain"></i> Flutter</span>
             <span class="pill"><i class="devicon-swift-plain"></i> Swift</span>
           </div>
-
-          <h3>Arquitetura & Padrões</h3>
+          <h3>Architecture & Patterns</h3>
           <div class="pill-group">
             <span class="pill">DDD</span>
             <span class="pill">Hexagonal</span>
@@ -524,26 +195,22 @@
             <span class="pill">REST/gRPC</span>
             <span class="pill">12-Factor Apps</span>
           </div>
-
           <h3>Event-Driven</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-apachekafka-original"></i> Apache Kafka</span>
             <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> Amazon SQS</span>
             <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> Amazon SNS</span>
           </div>
-
           <h3>Data & Cache</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
             <span class="pill"><i class="devicon-mysql-plain"></i> MySQL</span>
             <span class="pill"><i class="devicon-mongodb-plain"></i> MongoDB</span>
             <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> Amazon RDS</span>
-            <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> Amazon
-              DynamoDB</span>
+            <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> Amazon DynamoDB</span>
             <span class="pill"><i class="devicon-redis-plain"></i> Redis (Cache)</span>
           </div>
-
-          <h3>Cloud & Infraestrutura</h3>
+          <h3>Cloud & Infrastructure</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> AWS</span>
             <span class="pill"><i class="devicon-azure-plain"></i> Azure</span>
@@ -555,8 +222,7 @@
             <span class="pill"><i class="devicon-ansible-plain"></i> Ansible</span>
             <span class="pill"><i class="devicon-argocd-plain"></i> ArgoCD</span>
           </div>
-
-          <h3>DevOps & Observabilidade</h3>
+          <h3>DevOps & Observability</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-git-plain"></i> Git</span>
             <span class="pill"><i class="devicon-githubactions-plain"></i> GitHub Actions</span>
@@ -567,7 +233,6 @@
             <span class="pill"><i class="devicon-datadog-plain" style="color:#9ca3af;"></i> Datadog</span>
             <span class="pill"><i class="devicon-dynatrace-plain" style="color:#9ca3af;"></i> Dynatrace</span>
           </div>
-
           <h3>Quality Engineering</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-playwright-plain"></i> Playwright</span>
@@ -581,7 +246,6 @@
             <span class="pill"><i class="devicon-k6-plain" style="color:#9ca3af;"></i> k6</span>
             <span class="pill"><i class="devicon-apachejmeter-original" style="color:#9ca3af;"></i> JMeter</span>
           </div>
-
           <h3>AI & LLM</h3>
           <div class="pill-group">
             <span class="pill">RAG pipelines</span>
@@ -590,30 +254,25 @@
             <span class="pill"><i class="devicon-spring-plain"></i> Spring AI</span>
             <span class="pill"><i class="devicon-tensorflow-original"></i> TensorFlow / PyTorch</span>
           </div>
-
-          <h3>Sistemas Operacionais</h3>
+          <h3>Operating Systems</h3>
           <div class="pill-group">
             <span class="pill"><i class="devicon-windows8-original"></i> Windows</span>
             <span class="pill"><i class="devicon-ubuntu-plain"></i> Ubuntu</span>
             <span class="pill"><i class="devicon-apple-original"></i> macOS</span>
           </div>
-
-          <h3>Liderança & DevEx</h3>
+          <h3>Leadership & DevEx</h3>
           <div class="pill-group">
             <span class="pill">RFC/ADR governance</span>
             <span class="pill">SLI/SLO definition</span>
             <span class="pill">Developer platforms</span>
-            <span class="pill">Mentoria técnica</span>
+            <span class="pill">Technical mentorship</span>
           </div>
-
         </div>
       </section>
-
-      <!-- EXPERIENCE -->
       <section class="section" id="experience">
         <div class="section-title">
           <i class="fa-solid fa-briefcase"></i>
-          <h2>Experiência Profissional</h2>
+          <h2>Professional Experience</h2>
         </div>
         <div class="section-body">
           <div class="experience-item">
@@ -622,179 +281,136 @@
                 <div class="experience-role">Software Engineer</div>
                 <div class="experience-company">Zup Innovation</div>
               </div>
-              <div class="experience-meta">São Paulo · Fev 2025 – Set 2025</div>
+              <div class="experience-meta">São Paulo · Feb 2025 – Sep 2025</div>
             </div>
             <ul>
-              <li>Arquitetou e padronizou processos RFC/ADR, definiu SLI/SLOs e práticas de observabilidade, aumentando
-                a confiabilidade dos sistemas em 20%.</li>
-              <li>Desenvolveu e implantou microsserviços em Node.js (NestJS) e Java para cálculo de custódia e
-                integrações de crédito, reduzindo o tempo de processamento em 30%.</li>
-              <li>Implementou builds Docker multi-stage e deploys em EKS com Helm, garantindo upgrades sem downtime.
-              </li>
-              <li>Automatizou infraestrutura AWS com Terraform e GitHub Actions, reduzindo o tempo de deploy de horas
-                para 15 minutos.</li>
-              <li>Prototipou agentes RAG/LLM para análise de testes com Spring AI e Python (PyTorch, embeddings BERT)
-                avaliados com RAGAS, reduzindo falsos positivos em 25%.</li>
-              <li>Construiu modelos LSTM para analytics preditivo em dados financeiros, melhorando a acurácia de
-                previsões em 15%.</li>
+              <li>RFC/ADR Process Standardization: Architected and enforced RFC/ADR governance with SLI/SLO definitions and observability practices, boosting system reliability by 20%.</li>
+              <li>Microservices Development: Built and deployed Node.js (NestJS) and Java microservices for custody calculations and credit integrations, slashing processing time by 30%.</li>
+              <li>Containerization Optimization: Implemented multi-stage Docker builds and Helm-based EKS deployments, enabling zero-downtime upgrades.</li>
+              <li>Infrastructure Automation: Automated AWS environments using Terraform and GitHub Actions, reducing deployment time from hours to 15 minutes.</li>
+              <li>RAG/LLM Test Analysis Prototype: Developed RAG/LLM agents with Spring AI and Python (PyTorch, BERT embeddings), evaluated via RAGAS, cutting false positives by 25%.</li>
+              <li>Predictive Analytics Modeling: Created LSTM-based deep learning models for financial data forecasting, enhancing accuracy by 15%.</li>
             </ul>
           </div>
-
           <div class="experience-item">
             <div class="experience-header">
               <div>
                 <div class="experience-role">Software Engineer (Developer Experience)</div>
                 <div class="experience-company">Banco Bradesco</div>
               </div>
-              <div class="experience-meta">São Paulo · Set 2024 – Fev 2025</div>
+              <div class="experience-meta">São Paulo · Sep 2024 – Feb 2025</div>
             </div>
             <ul>
-              <li>Desenhou padrões corporativos para Docker/Kubernetes e observabilidade, reduzindo o tempo de
-                onboarding de desenvolvedores em 40%.</li>
-              <li>Criou templates reutilizáveis de pipelines CI/CD, diminuindo erros de release em 30%.</li>
-              <li>Desenvolveu bibliotecas internas de telemetria e integrou monitoramento Azure, melhorando a resposta a
-                incidentes.</li>
+              <li>Corporate Standards Design: Established Docker/Kubernetes and observability guidelines, accelerating developer onboarding by 40%.</li>
+              <li>CI/CD Pipeline Templating: Developed reusable CI/CD templates, decreasing release errors by 30%.</li>
+              <li>Telemetry Integration: Built internal libraries and Azure monitoring tools, improving incident response efficiency.</li>
             </ul>
           </div>
-
           <div class="experience-item">
             <div class="experience-header">
               <div>
                 <div class="experience-role">Chapter Lead</div>
                 <div class="experience-company">Banco Bradesco</div>
               </div>
-              <div class="experience-meta">São Paulo · Dez 2022 – Set 2024</div>
+              <div class="experience-meta">São Paulo · Dec 2022 – Sep 2024</div>
             </div>
             <ul>
-              <li>Definiu estratégia de QA para web, mobile e APIs, introduzindo Playwright e Appium e aumentando a
-                cobertura em 50%.</li>
-              <li>Integração de Datadog/Dynatrace, reduzindo MTTR em 35%.</li>
-              <li>Containerizou suítes de testes para execução paralela em AKS/EKS.</li>
+              <li>QA Strategy Leadership: Defined comprehensive QA approaches for web, mobile, and APIs with Playwright and Appium, increasing test coverage by 50%.</li>
+              <li>Monitoring Tool Integration: Incorporated Datadog/Dynatrace, reducing mean time to recovery (MTTR) by 35%.</li>
+              <li>Test Suite Containerization: Dockerized test suites for parallel AKS/EKS execution, enhancing scalability.</li>
             </ul>
           </div>
-
           <div class="experience-item">
             <div class="experience-header">
               <div>
                 <div class="experience-role">Software Engineer</div>
                 <div class="experience-company">banQi</div>
               </div>
-              <div class="experience-meta">São Paulo · Abr 2021 – Dez 2022</div>
+              <div class="experience-meta">São Paulo · Apr 2021 – Dec 2022</div>
             </div>
             <ul>
-              <li>Desenvolveu frameworks de automação E2E com CodeceptJS e Jest e APIs em Node.js + TypeScript para
-                jornadas financeiras de alto tráfego (como Black Friday).</li>
-              <li>Containerizou pipelines de testes e habilitou execução paralela, reduzindo tempo de runtime e
-                aumentando previsibilidade.</li>
-              <li>Implementou geração de casos de teste baseada em RAG usando LlamaIndex e Python (TensorFlow, modelos
-                Transformer), avaliada com RAGAS, melhorando a cobertura de testes em 20%.</li>
-              <li>Aplicou CNNs para detecção de anomalias em transações, reduzindo o tempo de detecção de fraude em
-                10%.</li>
+              <li>E2E Automation Framework: Engineered CodeceptJS and Jest frameworks with Node.js/TypeScript APIs for high-traffic financial operations, ensuring Black Friday reliability.</li>
+              <li>Pipeline Parallelization: Containerized and parallelized test pipelines, minimizing runtime and boosting predictability.</li>
+              <li>RAG Test Case Generation: Implemented LlamaIndex and Python (TensorFlow, Transformers) for RAG-based test creation, evaluated with RAGAS, improving coverage by 20%.</li>
+              <li>Anomaly Detection System: Applied CNN algorithms to transaction monitoring, shortening fraud detection time by 10%.</li>
             </ul>
           </div>
-
           <div class="experience-item">
             <div class="experience-header">
               <div>
                 <div class="experience-role">Software Engineer</div>
                 <div class="experience-company">Vericode</div>
               </div>
-              <div class="experience-meta">São Paulo · Out 2019 – Abr 2021</div>
+              <div class="experience-meta">São Paulo · Oct 2019 – Apr 2021</div>
             </div>
             <ul>
-              <li>Construiu frameworks de automação em Java e TypeScript para testes Web e API.</li>
-              <li>Introduziu testes de contrato e performance, aumentando a confiabilidade dos sistemas.</li>
-              <li>Desenvolveu ferramentas de automação de testes com IA em Python (PyTorch, modelos LSTM) para análise
-                preditiva de falhas, reduzindo manutenção de testes em 15%.</li>
-              <li>Integrou pipelines RAG com LangChain e FAISS para geração inteligente de dados de teste, aumentando a
-                acurácia dos testes em 20%.</li>
+              <li>Automation Framework Construction: Developed Java/TypeScript frameworks for web/API testing, incorporating contract and performance testing for greater reliability.</li>
+              <li>AI Test Tool Development: Created Python (PyTorch, LSTM) tools for predictive failure analysis, reducing test maintenance by 15%.</li>
+              <li>RAG Data Generation Pipeline: Integrated LangChain and FAISS for intelligent test data, elevating accuracy by 20%.</li>
             </ul>
           </div>
-
           <div class="experience-item">
             <div class="experience-header">
               <div>
                 <div class="experience-role">QA Engineer</div>
                 <div class="experience-company">TEx</div>
               </div>
-              <div class="experience-meta">São Paulo · Set 2018 – Set 2019</div>
+              <div class="experience-meta">São Paulo · Sep 2018 – Sep 2019</div>
             </div>
             <ul>
-              <li>Criou suítes de regressão baseadas em Selenium para aplicações de seguros, reduzindo testes manuais em
-                60%.</li>
+              <li>Regression Suite Creation: Built Selenium regression suites for insurance applications, cutting manual testing by 60%.</li>
             </ul>
           </div>
-
           <div class="experience-item">
             <div class="experience-header">
               <div>
                 <div class="experience-role">QA Engineer</div>
                 <div class="experience-company">Keeggo</div>
               </div>
-              <div class="experience-meta">São Paulo · Jun 2018 – Set 2018</div>
+              <div class="experience-meta">São Paulo · Jun 2018 – Sep 2018</div>
             </div>
             <ul>
-              <li>Atuação em testes de software em projetos corporativos.</li>
+              <li>Conducted software testing in corporate projects.</li>
             </ul>
           </div>
-
           <div class="experience-item">
             <div class="experience-header">
               <div>
-                <div class="experience-role">Estagiário de Suporte Técnico</div>
+                <div class="experience-role">Technical Support Intern</div>
                 <div class="experience-company">SISCOM</div>
               </div>
-              <div class="experience-meta">São Paulo · Dez 2017 – Jun 2018</div>
+              <div class="experience-meta">São Paulo · Dec 2017 – Jun 2018</div>
             </div>
             <ul>
-              <li>Suporte técnico e atendimento a usuários em ambiente corporativo.</li>
+              <li>Provided technical support and user assistance in corporate environment.</li>
             </ul>
           </div>
         </div>
       </section>
-
-      <!-- PROJECTS -->
       <section class="section" id="projects">
-        <div class="section-title">
-          <i class="fa-solid fa-diagram-project"></i>
-          <h2>Projetos em Destaque</h2>
-        </div>
+        <div class="section-title"><i class="fa-solid fa-diagram-project"></i><h2>Featured Projects</h2></div>
         <div class="section-body">
           <ul class="list-compact">
-            <li><strong>Custody Calculator (Banking)</strong> — Spring Boot + Kafka + PostgreSQL; arquitetura hexagonal
-              com OpenTelemetry; deploy em EKS com Helm para cálculo de custódia em grande escala.</li>
-            <li><strong>DevEx Platform (Bradesco)</strong> — Padronização de templates Node/Spring, pipelines CI/CD com
-              scans de segurança e bibliotecas de observabilidade, elevando a maturidade de Developer Experience.</li>
-            <li><strong>LLM-Aided Test Harness</strong> — Orquestração de testes com Playwright + helpers em Python/LLM,
-              reduzindo falsos positivos de testes automatizados em 25%.</li>
-            <li><strong>Banking Docs RAG (POC)</strong> — Pipeline RAG (FAISS/Redis Vector + LlamaIndex + RAGAS) em AWS
-              Lambda + FastAPI para consulta inteligente de documentos bancários.</li>
+            <li><strong>Custody Calculator (Banking)</strong> — Spring Boot + Kafka + PostgreSQL; hexagonal architecture with OpenTelemetry; deployed on EKS with Helm.</li>
+            <li><strong>DevEx Platform (Bradesco)</strong> — Standardized Node/Spring templates, CI/CD + security scans, and observability libraries.</li>
+            <li><strong>LLM-Aided Test Harness</strong> — Playwright + Python LLM helper; reduced false positives by 25%.</li>
+            <li><strong>Banking Docs RAG (POC)</strong> — RAG pipeline (FAISS/Redis Vector + LlamaIndex + RAGAS) deployed via AWS Lambda + FastAPI.</li>
           </ul>
         </div>
       </section>
-
-      <!-- EDUCATION -->
       <section class="section" id="education">
-        <div class="section-title">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <h2>Formação</h2>
-        </div>
+        <div class="section-title"><i class="fa-solid fa-graduation-cap"></i><h2>Education</h2></div>
         <div class="section-body">
           <ul class="list-compact">
-            <li><strong>Pós-graduação:</strong> Software Engineering with AI — Full Cycle (2025–2026)</li>
+            <li><strong>Postgraduate:</strong> Software Engineering with AI — Full Cycle (2025–2026)</li>
             <li><strong>MBA:</strong> IT Management — FIAP (2023–2024)</li>
-            <li><strong>Bacharelado:</strong> Information Systems — Faculdade Impacta (2018–2022)</li>
-            <li><strong>Tecnólogo:</strong> Systems Analysis & Development — Faculdade Impacta (2018–2020)</li>
+            <li><strong>Bachelor’s:</strong> Information Systems — Faculdade Impacta (2018–2022)</li>
+            <li><strong>Technologist:</strong> Systems Analysis & Development — Faculdade Impacta (2018–2020)</li>
           </ul>
         </div>
       </section>
-
-      <!-- CERTIFICATIONS -->
       <section class="section" id="certifications">
-        <div class="section-title">
-          <i class="fa-solid fa-certificate"></i>
-          <h2>Certificações</h2>
-        </div>
+        <div class="section-title"><i class="fa-solid fa-certificate"></i><h2>Certifications</h2></div>
         <div class="section-body">
           <ul class="list-compact">
             <li>Scaled Agile: Certified SAFe® 6 Agilist</li>
@@ -808,22 +424,16 @@
           </ul>
         </div>
       </section>
-
-      <!-- LANGUAGES -->
       <section class="section" id="languages">
-        <div class="section-title">
-          <i class="fa-solid fa-language"></i>
-          <h2>Idiomas</h2>
-        </div>
+        <div class="section-title"><i class="fa-solid fa-language"></i><h2>Languages</h2></div>
         <div class="section-body">
           <ul class="list-compact">
-            <li>Português: Nativo</li>
-            <li>Inglês: Avançado (profissional / técnico)</li>
+            <li>Portuguese: Native</li>
+            <li>English: Advanced (professional / technical)</li>
           </ul>
         </div>
       </section>
     </main>
   </div>
 </body>
-
 </html>
