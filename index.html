@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Andrey H. Onoue | Software Engineer · Platform · QA · AI</title>
@@ -27,7 +28,11 @@
       --accent: #38bdf8;
       --accent-soft: rgba(56, 189, 248, 0.1);
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: "Inter", system-ui, sans-serif;
@@ -38,62 +43,276 @@
         var(--bg);
       color: var(--text);
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .page { min-height: 100vh; display: flex; max-width: 1200px; margin: 0 auto; padding: 24px 16px; gap: 24px; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      gap: 24px;
+    }
+
     /* SIDEBAR */
     .sidebar {
-      width: 320px; min-width: 260px; max-width: 320px;
-      background: linear-gradient(180deg, rgba(15,23,42,0.95), rgba(15,23,42,0.98));
-      border-radius: 18px; padding: 20px 18px 24px;
-      border: 1px solid rgba(148,163,184,0.4);
-      box-shadow: 0 18px 45px rgba(15,23,42,0.8), 0 0 0 1px rgba(15,23,42,0.6);
-      position: sticky; top: 24px; align-self: flex-start;
-      display: flex; flex-direction: column; gap: 18px;
+      width: 320px;
+      min-width: 260px;
+      max-width: 320px;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+      border-radius: 18px;
+      padding: 20px 18px 24px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8), 0 0 0 1px rgba(15, 23, 42, 0.6);
+      position: sticky;
+      top: 24px;
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
-    .avatar { width: 120px; height: 120px; border-radius: 999px; object-fit: cover; border: 2px solid var(--accent); box-shadow: 0 0 0 4px rgba(56,189,248,0.25); }
-    .name { font-size: 1.2rem; font-weight: 700; }
-    .role { font-size: 0.9rem; color: var(--muted); }
-    .tagline { font-size: 0.85rem; color: var(--muted); }
-    .sidebar-section-title { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; color: var(--muted); margin-bottom: 3px; }
-    .contact-list, .link-list, .mini-pill-group { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; font-size: 0.85rem; }
-    .contact-list li, .link-list li { display: flex; align-items: flex-start; gap: 6px; color: var(--muted); }
-    .contact-list i, .link-list i { width: 16px; text-align: center; font-size: 0.9rem; color: var(--accent); margin-top: 1px; }
-    .mini-pill-group { flex-direction: row; flex-wrap: wrap; gap: 6px; }
-    .mini-pill { font-size: 0.7rem; padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.6); background: rgba(15,23,42,0.9); color: var(--muted); }
-    .nav-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-    .nav-links a { font-size: 0.75rem; padding: 5px 9px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.4); background: rgba(15,23,42,0.95); }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
+    }
+
+    .name {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .sidebar-section-title {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .contact-list,
+    .link-list,
+    .mini-pill-group {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 0.85rem;
+    }
+
+    .contact-list li,
+    .link-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      color: var(--muted);
+    }
+
+    .contact-list i,
+    .link-list i {
+      width: 16px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-top: 1px;
+    }
+
+    .mini-pill-group {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .mini-pill {
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
     /* MAIN */
     .main {
       flex: 1;
-      background: rgba(15,23,42,0.9);
-      border-radius: 18px; padding: 20px 20px 28px;
-      border: 1px solid rgba(148,163,184,0.25);
-      box-shadow: 0 16px 35px rgba(15,23,42,0.7), 0 0 0 1px rgba(15,23,42,0.6);
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 18px;
+      padding: 20px 20px 28px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.7), 0 0 0 1px rgba(15, 23, 42, 0.6);
       backdrop-filter: blur(18px);
     }
-    .main-header { padding-bottom: 12px; border-bottom: 1px solid rgba(30,64,175,0.6); margin-bottom: 18px; }
-    .main-header h1 { font-size: 1.4rem; margin: 0 0 4px; }
-    .main-header p { margin: 0; font-size: 0.9rem; color: var(--muted); }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-    .badge { font-size: 0.75rem; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(56,189,248,0.6); background: rgba(15,23,42,0.95); color: var(--accent); }
-    .section { margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid rgba(30,64,175,0.45); }
-    .section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .section-title { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-    .section-title h2 { margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); }
-    .section-title i { font-size: 0.9rem; color: var(--accent); }
-    .pill-group { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 10px; }
-    .pill { font-size: 0.78rem; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.6); background: rgba(15,23,42,0.95); color: var(--muted); }
-    .experience-item { margin-bottom: 14px; }
-    .experience-header { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap; }
-    .experience-role { font-weight: 600; font-size: 0.95rem; }
-    .experience-company { font-size: 0.9rem; color: var(--muted); }
-    .experience-meta { font-size: 0.8rem; color: var(--muted); }
-    .list-compact { padding-left: 18px; margin: 4px 0 0; }
-    .list-compact li { margin-bottom: 3px; }
-    @media (max-width: 900px) { .page { flex-direction: column; } .sidebar { position: static; width: 100%; max-width: 100%; } }
+
+    .main-header {
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(30, 64, 175, 0.6);
+      margin-bottom: 18px;
+    }
+
+    .main-header h1 {
+      font-size: 1.4rem;
+      margin: 0 0 4px;
+    }
+
+    .main-header p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--accent);
+    }
+
+    .section {
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(30, 64, 175, 0.45);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .section-title i {
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 4px 0 10px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--muted);
+    }
+
+    .experience-item {
+      margin-bottom: 14px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .experience-role {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .experience-company {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .experience-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .list-compact {
+      padding-left: 18px;
+      margin: 4px 0 0;
+    }
+
+    .list-compact li {
+      margin-bottom: 3px;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="page">
     <!-- SIDEBAR -->
@@ -103,16 +322,20 @@
         <div class="name">Andrey H. Onoue</div>
         <div class="role">Software Engineer · QA · Platform Engineer · SRE · AI</div>
         <p class="tagline">
-          Deep expertise in software engineering, QA, Kubernetes/Docker, platform engineering, observability and AI/LLM in banking and fintech environments.
+          Deep expertise in software engineering, QA, Kubernetes/Docker, platform engineering, observability and AI/LLM
+          in banking and fintech environments.
         </p>
       </div>
       <div>
         <div class="sidebar-section-title">Contact</div>
         <ul class="contact-list">
           <li><i class="fa-solid fa-location-dot"></i><span>São Bernardo do Campo – SP, Brazil</span></li>
-          <li><i class="fa-solid fa-envelope"></i><span><a href="mailto:andreyhitoshi1997@gmail.com">Email</a></span></li>
-          <li><i class="fa-brands fa-linkedin"></i><span><a href="https://www.linkedin.com/in/andrey-onoue-411453123" target="_blank" rel="noreferrer">LinkedIn</a></span></li>
-          <li><i class="fa-brands fa-github"></i><span><a href="https://github.com/andreyhitoshi1997" target="_blank" rel="noreferrer">GitHub</a></span></li>
+          <li><i class="fa-solid fa-envelope"></i><span><a href="mailto:andreyhitoshi1997@gmail.com">Email</a></span>
+          </li>
+          <li><i class="fa-brands fa-linkedin"></i><span><a href="https://www.linkedin.com/in/andrey-onoue-411453123"
+                target="_blank" rel="noreferrer">LinkedIn</a></span></li>
+          <li><i class="fa-brands fa-github"></i><span><a href="https://github.com/andreyhitoshi1997" target="_blank"
+                rel="noreferrer">GitHub</a></span></li>
         </ul>
       </div>
       <div>
@@ -144,7 +367,8 @@
       <header class="main-header" id="about">
         <h1>Software Engineer for Banks, Fintechs & Financial Platforms</h1>
         <p>
-          Software Engineering, QA, Kubernetes, Docker, Observability and AI applied to large-scale projects focused on fintechs, banks and financial companies.
+          Software Engineering, QA, Kubernetes, Docker, Observability and AI applied to large-scale projects focused on
+          fintechs, banks and financial companies.
         </p>
         <div class="badge-row">
           <span class="badge">Cloud-Native</span>
@@ -156,15 +380,28 @@
         </div>
       </header>
       <section class="section">
-        <div class="section-title"><i class="fa-solid fa-user-astronaut"></i><h2>Summary</h2></div>
+        <div class="section-title"><i class="fa-solid fa-user-astronaut"></i>
+          <h2>Summary</h2>
+        </div>
         <div class="section-body">
-          <p>Software Engineer with expertise in <strong>TypeScript, React, Node/NestJS and Java/Spring</strong>, building <strong>fullstack and cloud-native</strong> solutions for banks and fintechs. Strong background in <strong>development, DevOps and quality engineering</strong>, delivering end-to-end solutions focused on reliability, security and business metrics.</p>
-          <p>Experienced in <strong>DDD/Event-Driven architectures</strong>, <strong>AWS & Azure</strong> environments, <strong>CI/CD automation</strong> and <strong>observability</strong> (OpenTelemetry, Prometheus, Grafana, Datadog, Dynatrace). Key contributor in <strong>Platform Engineering and Developer Experience</strong>, leading RFC/ADR processes, SLI/SLO definition and internal platforms that reduce operational costs and increase squad efficiency.</p>
-          <p>In AI, focus on <strong>RAG pipelines, LLMs and deep learning models</strong> (Transformers, LSTMs, CNNs) applied to software quality, automated testing and analytics, reducing false positives, improving test coverage and bringing intelligence to technical decisions in regulated environments.</p>
+          <p>Software Engineer with expertise in <strong>TypeScript, React, Node/NestJS and Java/Spring</strong>,
+            building <strong>fullstack and cloud-native</strong> solutions for banks and fintechs. Strong background in
+            <strong>development, DevOps and quality engineering</strong>, delivering end-to-end solutions focused on
+            reliability, security and business metrics.</p>
+          <p>Experienced in <strong>DDD/Event-Driven architectures</strong>, <strong>AWS & Azure</strong> environments,
+            <strong>CI/CD automation</strong> and <strong>observability</strong> (OpenTelemetry, Prometheus, Grafana,
+            Datadog, Dynatrace). Key contributor in <strong>Platform Engineering and Developer Experience</strong>,
+            leading RFC/ADR processes, SLI/SLO definition and internal platforms that reduce operational costs and
+            increase squad efficiency.</p>
+          <p>In AI, focus on <strong>RAG pipelines, LLMs and deep learning models</strong> (Transformers, LSTMs, CNNs)
+            applied to software quality, automated testing and analytics, reducing false positives, improving test
+            coverage and bringing intelligence to technical decisions in regulated environments.</p>
         </div>
       </section>
       <section class="section" id="skills">
-        <div class="section-title"><i class="fa-solid fa-microchip"></i><h2>Core Skills</h2></div>
+        <div class="section-title"><i class="fa-solid fa-microchip"></i>
+          <h2>Core Skills</h2>
+        </div>
         <div class="section-body">
           <h3>Languages & Frameworks</h3>
           <div class="pill-group">
@@ -207,7 +444,8 @@
             <span class="pill"><i class="devicon-mysql-plain"></i> MySQL</span>
             <span class="pill"><i class="devicon-mongodb-plain"></i> MongoDB</span>
             <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> Amazon RDS</span>
-            <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> Amazon DynamoDB</span>
+            <span class="pill"><i class="devicon-amazonwebservices-plain" style="color:#9ca3af;"></i> Amazon
+              DynamoDB</span>
             <span class="pill"><i class="devicon-redis-plain"></i> Redis (Cache)</span>
           </div>
           <h3>Cloud & Infrastructure</h3>
@@ -284,12 +522,18 @@
               <div class="experience-meta">São Paulo · Feb 2025 – Sep 2025</div>
             </div>
             <ul>
-              <li>RFC/ADR Process Standardization: Architected and enforced RFC/ADR governance with SLI/SLO definitions and observability practices, boosting system reliability by 20%.</li>
-              <li>Microservices Development: Built and deployed Node.js (NestJS) and Java microservices for custody calculations and credit integrations, slashing processing time by 30%.</li>
-              <li>Containerization Optimization: Implemented multi-stage Docker builds and Helm-based EKS deployments, enabling zero-downtime upgrades.</li>
-              <li>Infrastructure Automation: Automated AWS environments using Terraform and GitHub Actions, reducing deployment time from hours to 15 minutes.</li>
-              <li>RAG/LLM Test Analysis Prototype: Developed RAG/LLM agents with Spring AI and Python (PyTorch, BERT embeddings), evaluated via RAGAS, cutting false positives by 25%.</li>
-              <li>Predictive Analytics Modeling: Created LSTM-based deep learning models for financial data forecasting, enhancing accuracy by 15%.</li>
+              <li>RFC/ADR Process Standardization: Architected and enforced RFC/ADR governance with SLI/SLO definitions
+                and observability practices, boosting system reliability by 20%.</li>
+              <li>Microservices Development: Built and deployed Node.js (NestJS) and Java microservices for custody
+                calculations and credit integrations, slashing processing time by 30%.</li>
+              <li>Containerization Optimization: Implemented multi-stage Docker builds and Helm-based EKS deployments,
+                enabling zero-downtime upgrades.</li>
+              <li>Infrastructure Automation: Automated AWS environments using Terraform and GitHub Actions, reducing
+                deployment time from hours to 15 minutes.</li>
+              <li>RAG/LLM Test Analysis Prototype: Developed RAG/LLM agents with Spring AI and Python (PyTorch, BERT
+                embeddings), evaluated via RAGAS, cutting false positives by 25%.</li>
+              <li>Predictive Analytics Modeling: Created LSTM-based deep learning models for financial data forecasting,
+                enhancing accuracy by 15%.</li>
             </ul>
           </div>
           <div class="experience-item">
@@ -301,9 +545,11 @@
               <div class="experience-meta">São Paulo · Sep 2024 – Feb 2025</div>
             </div>
             <ul>
-              <li>Corporate Standards Design: Established Docker/Kubernetes and observability guidelines, accelerating developer onboarding by 40%.</li>
+              <li>Corporate Standards Design: Established Docker/Kubernetes and observability guidelines, accelerating
+                developer onboarding by 40%.</li>
               <li>CI/CD Pipeline Templating: Developed reusable CI/CD templates, decreasing release errors by 30%.</li>
-              <li>Telemetry Integration: Built internal libraries and Azure monitoring tools, improving incident response efficiency.</li>
+              <li>Telemetry Integration: Built internal libraries and Azure monitoring tools, improving incident
+                response efficiency.</li>
             </ul>
           </div>
           <div class="experience-item">
@@ -315,9 +561,12 @@
               <div class="experience-meta">São Paulo · Dec 2022 – Sep 2024</div>
             </div>
             <ul>
-              <li>QA Strategy Leadership: Defined comprehensive QA approaches for web, mobile, and APIs with Playwright and Appium, increasing test coverage by 50%.</li>
-              <li>Monitoring Tool Integration: Incorporated Datadog/Dynatrace, reducing mean time to recovery (MTTR) by 35%.</li>
-              <li>Test Suite Containerization: Dockerized test suites for parallel AKS/EKS execution, enhancing scalability.</li>
+              <li>QA Strategy Leadership: Defined comprehensive QA approaches for web, mobile, and APIs with Playwright
+                and Appium, increasing test coverage by 50%.</li>
+              <li>Monitoring Tool Integration: Incorporated Datadog/Dynatrace, reducing mean time to recovery (MTTR) by
+                35%.</li>
+              <li>Test Suite Containerization: Dockerized test suites for parallel AKS/EKS execution, enhancing
+                scalability.</li>
             </ul>
           </div>
           <div class="experience-item">
@@ -329,10 +578,14 @@
               <div class="experience-meta">São Paulo · Apr 2021 – Dec 2022</div>
             </div>
             <ul>
-              <li>E2E Automation Framework: Engineered CodeceptJS and Jest frameworks with Node.js/TypeScript APIs for high-traffic financial operations, ensuring Black Friday reliability.</li>
-              <li>Pipeline Parallelization: Containerized and parallelized test pipelines, minimizing runtime and boosting predictability.</li>
-              <li>RAG Test Case Generation: Implemented LlamaIndex and Python (TensorFlow, Transformers) for RAG-based test creation, evaluated with RAGAS, improving coverage by 20%.</li>
-              <li>Anomaly Detection System: Applied CNN algorithms to transaction monitoring, shortening fraud detection time by 10%.</li>
+              <li>E2E Automation Framework: Engineered CodeceptJS and Jest frameworks with Node.js/TypeScript APIs for
+                high-traffic financial operations, ensuring Black Friday reliability.</li>
+              <li>Pipeline Parallelization: Containerized and parallelized test pipelines, minimizing runtime and
+                boosting predictability.</li>
+              <li>RAG Test Case Generation: Implemented LlamaIndex and Python (TensorFlow, Transformers) for RAG-based
+                test creation, evaluated with RAGAS, improving coverage by 20%.</li>
+              <li>Anomaly Detection System: Applied CNN algorithms to transaction monitoring, shortening fraud detection
+                time by 10%.</li>
             </ul>
           </div>
           <div class="experience-item">
@@ -344,9 +597,12 @@
               <div class="experience-meta">São Paulo · Oct 2019 – Apr 2021</div>
             </div>
             <ul>
-              <li>Automation Framework Construction: Developed Java/TypeScript frameworks for web/API testing, incorporating contract and performance testing for greater reliability.</li>
-              <li>AI Test Tool Development: Created Python (PyTorch, LSTM) tools for predictive failure analysis, reducing test maintenance by 15%.</li>
-              <li>RAG Data Generation Pipeline: Integrated LangChain and FAISS for intelligent test data, elevating accuracy by 20%.</li>
+              <li>Automation Framework Construction: Developed Java/TypeScript frameworks for web/API testing,
+                incorporating contract and performance testing for greater reliability.</li>
+              <li>AI Test Tool Development: Created Python (PyTorch, LSTM) tools for predictive failure analysis,
+                reducing test maintenance by 15%.</li>
+              <li>RAG Data Generation Pipeline: Integrated LangChain and FAISS for intelligent test data, elevating
+                accuracy by 20%.</li>
             </ul>
           </div>
           <div class="experience-item">
@@ -358,7 +614,8 @@
               <div class="experience-meta">São Paulo · Sep 2018 – Sep 2019</div>
             </div>
             <ul>
-              <li>Regression Suite Creation: Built Selenium regression suites for insurance applications, cutting manual testing by 60%.</li>
+              <li>Regression Suite Creation: Built Selenium regression suites for insurance applications, cutting manual
+                testing by 60%.</li>
             </ul>
           </div>
           <div class="experience-item">
@@ -388,18 +645,26 @@
         </div>
       </section>
       <section class="section" id="projects">
-        <div class="section-title"><i class="fa-solid fa-diagram-project"></i><h2>Featured Projects</h2></div>
+        <div class="section-title"><i class="fa-solid fa-diagram-project"></i>
+          <h2>Featured Projects</h2>
+        </div>
         <div class="section-body">
           <ul class="list-compact">
-            <li><strong>Custody Calculator (Banking)</strong> — Spring Boot + Kafka + PostgreSQL; hexagonal architecture with OpenTelemetry; deployed on EKS with Helm.</li>
-            <li><strong>DevEx Platform (Bradesco)</strong> — Standardized Node/Spring templates, CI/CD + security scans, and observability libraries.</li>
-            <li><strong>LLM-Aided Test Harness</strong> — Playwright + Python LLM helper; reduced false positives by 25%.</li>
-            <li><strong>Banking Docs RAG (POC)</strong> — RAG pipeline (FAISS/Redis Vector + LlamaIndex + RAGAS) deployed via AWS Lambda + FastAPI.</li>
+            <li><strong>Custody Calculator (Banking)</strong> — Spring Boot + Kafka + PostgreSQL; hexagonal architecture
+              with OpenTelemetry; deployed on EKS with Helm.</li>
+            <li><strong>DevEx Platform (Bradesco)</strong> — Standardized Node/Spring templates, CI/CD + security scans,
+              and observability libraries.</li>
+            <li><strong>LLM-Aided Test Harness</strong> — Playwright + Python LLM helper; reduced false positives by
+              25%.</li>
+            <li><strong>Banking Docs RAG (POC)</strong> — RAG pipeline (FAISS/Redis Vector + LlamaIndex + RAGAS)
+              deployed via AWS Lambda + FastAPI.</li>
           </ul>
         </div>
       </section>
       <section class="section" id="education">
-        <div class="section-title"><i class="fa-solid fa-graduation-cap"></i><h2>Education</h2></div>
+        <div class="section-title"><i class="fa-solid fa-graduation-cap"></i>
+          <h2>Education</h2>
+        </div>
         <div class="section-body">
           <ul class="list-compact">
             <li><strong>Postgraduate:</strong> Software Engineering with AI — Full Cycle (2025–2026)</li>
@@ -410,22 +675,36 @@
         </div>
       </section>
       <section class="section" id="certifications">
-        <div class="section-title"><i class="fa-solid fa-certificate"></i><h2>Certifications</h2></div>
+        <div class="section-title"><i class="fa-solid fa-certificate"></i>
+          <h2>Certifications</h2>
+        </div>
         <div class="section-body">
           <ul class="list-compact">
             <li>Scaled Agile: Certified SAFe® 6 Agilist</li>
             <li>ISTQB CTFL</li>
             <li>Scrum Foundation</li>
             <li>Six Sigma Yellow Belt</li>
+            <li>AWS: Well-Architected Proficient</li>
+            <li>Platform Engineering: Kubernetes Cluster Lifecycle Management in Platform Engineering</li>
+            <li>Platform Engineering: Observability for Platform Engineering</li>
+            <li>Platform Engineering: Cloud Development Environments for Platform Engineers</li>
+            <li>Platform Engineering: Intro to AI in platform engineering</li>
+            <li>Platform Engineering: Introduction to Platform Engineering</li>
             <li>Microsoft Azure Fundamentals (AZ-900)</li>
             <li>Microsoft Azure Data Fundamentals (DP-900)</li>
-            <li>Management 3.0 — Agile Leadership (Change Leadership, People Leadership, Co-Creation)</li>
+            <li>Management 3.0 — Agile Leadership (Change Leadership, People Leadership, Co-Creatio, Team Leadership, OKR and Metrics)</li>
+            <li>GitHub: Foundations</li>
+            <li>Scrum Foundation Professional Certification - SFPC™</li>
+            <li>StartSe: Ai for Leaders</li>
+            <li>Datadog: Data Dog 101: Developler</li>
             <li>CPA-10 (ANBIMA)</li>
           </ul>
         </div>
       </section>
       <section class="section" id="languages">
-        <div class="section-title"><i class="fa-solid fa-language"></i><h2>Languages</h2></div>
+        <div class="section-title"><i class="fa-solid fa-language"></i>
+          <h2>Languages</h2>
+        </div>
         <div class="section-body">
           <ul class="list-compact">
             <li>Portuguese: Native</li>
@@ -436,4 +715,5 @@
     </main>
   </div>
 </body>
+
 </html>
